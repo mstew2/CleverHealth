@@ -3,12 +3,30 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Login from "./pages/Login"
+import "./style.scss"
+
+const Layout = ()=>{
+  return (
+    <>
+    <Navbar/>
+    <Outlet/>
+    <Footer/>
+    </>
+  )
+}
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Layout/>,
+    children:[
+      {
+        path:"/",
+        element:<Home/>
+      }
+    ]
   },
   {
     path: "/login",
@@ -18,8 +36,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
-      <RouterProvider router={router}/>
+    <div className="app">
+      <div className="container">
+        <RouterProvider router={router} />
+      </div>
     </div>
   );
 }
