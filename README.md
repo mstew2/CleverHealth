@@ -1,3 +1,7 @@
+# summary
+cd into client, if you dont have npm installed then run 'npm install' as well as 'npm add react-router-dom'
+then to run it do 'npm start'
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
