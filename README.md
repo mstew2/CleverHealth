@@ -1,6 +1,8 @@
 # summary
-cd into client, if you dont have npm installed then run 'npm install' as well as 'npm add react-router-dom'
-then to run it do 'npm start'
+cd into client, if you dont have npm installed then run 'npm install' ??as well as 'npm add react-router-dom' and 'npm add sass'
+inside of api, run 'npm init -y' and 'npm add express mysql nodemon'??
+
+to run the app, cd into client and run 'npm start'
 
 # Getting Started with Create React App
 
