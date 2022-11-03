@@ -63,63 +63,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  //below is google auth
-  const [ profile, setProfile ] = useState([]);
-    const clientId = '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com';
-    useEffect(() => {
-        const initClient = () => {
-            gapi.client.init({
-                clientId: clientId,
-                scope: ''
-            });
-        };
-        gapi.load('client:auth2', initClient);
-    });
-
-    const onSuccess = (res) => {
-        setProfile(res.profileObj);
-    };
-
-    const onFailure = (err) => {
-        console.log('failed', err);
-    };
-
-    const logOut = () => {
-        setProfile(null);
-    };
-
-    return (
-        <div>
-          //idk if this is necessary
-          {/* <Login />
-          <Logout /> */}
-          //this above rite here
-            <h2>React Google Login</h2>
-            <br />
-            <br />
-            {profile ? (
-                <div>
-                    <img src={profile.imageUrl} alt="user image" />
-                    <h3>User Logged in</h3>
-                    <p>Name: {profile.name}</p>
-                    <p>Email Address: {profile.email}</p>
-                    <br />
-                    <br />
-                    {/* <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} /> */}
-                </div>
-            ) : (
-                <GoogleLogin
-                    clientId={clientId}
-                    buttonText="Sign in with Google"
-                    onSuccess={onSuccess}
-                    onFailure={onFailure}
-                    cookiePolicy={'single_host_origin'}
-                    isSignedIn={true}
-                />
-            )}
-        </div>
-    );
-    //below unused is from vid
   return (
     <div className="app">
       <div className="container">
@@ -127,6 +70,70 @@ function App() {
       </div>
     </div>
   );
+  // //below is google auth
+  // const [ profile, setProfile ] = useState([]);
+  //   const clientId = '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com';
+  //   useEffect(() => {
+  //       const initClient = () => {
+  //           gapi.client.init({
+  //               clientId: clientId,
+  //               scope: ''
+  //           });
+  //       };
+  //       gapi.load('client:auth2', initClient);
+  //   });
+
+  //   const onSuccess = (res) => {
+  //       setProfile(res.profileObj);
+  //   };
+
+  //   const onFailure = (err) => {
+  //       console.log('failed', err);
+  //   };
+
+  //   const logOut = () => {
+  //       setProfile(null);
+  //   };
+
+  //   return (
+  //       <div>
+  //         //idk if this is necessary
+  //         {/* <Login />
+  //         <Logout /> */}
+  //         //this above rite here
+  //           <h2>React Google Login</h2>
+  //           <br />
+  //           <br />
+  //           {profile ? (
+  //               <div>
+  //                   <img src={profile.imageUrl} alt="user image" />
+  //                   <h3>User Logged in</h3>
+  //                   <p>Name: {profile.name}</p>
+  //                   <p>Email Address: {profile.email}</p>
+  //                   <br />
+  //                   <br />
+  //                   {/* <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} /> */}
+  //               </div>
+  //           ) : (
+  //               <GoogleLogin
+  //                   clientId={clientId}
+  //                   buttonText="Sign in with Google"
+  //                   onSuccess={onSuccess}
+  //                   onFailure={onFailure}
+  //                   cookiePolicy={'single_host_origin'}
+  //                   isSignedIn={true}
+  //               />
+  //           )}
+  //       </div>
+//};
+    //below unused is from vid
+  // return (
+  //   <div className="app">
+  //     <div className="container">
+  //       <RouterProvider router={router} />
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default App;
