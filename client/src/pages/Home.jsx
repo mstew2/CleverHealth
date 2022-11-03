@@ -76,3 +76,4 @@ const Home = () => {
 };
 
 export default Home;
+//i dont think we need a login page because of the google auth
