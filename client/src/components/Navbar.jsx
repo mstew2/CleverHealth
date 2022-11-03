@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import Logo from "../img/logo.png";
+import GoogleButton from 'react-google-button'
+
 
 const Navbar = () => {
 //   const { currentUser, logout } = useContext(AuthContext);
@@ -30,11 +32,11 @@ const Navbar = () => {
           {/* <span>{currentUser?.username}</span>
           {currentUser ? (
             <span onClick={logout}>Logout</span> */}
-          ) : (
+      
             <Link className="sw" to="/savedworkouts">
-              Login
+            <GoogleButton onClick={() => { console.log('Google button clicked') }} />
             </Link>
-          )}
+          
         </div>
       </div>
     </div>

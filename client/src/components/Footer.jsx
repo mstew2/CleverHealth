@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <img src={Logo} alt="" />
       <span>
-        made by ya boi.
+        made by team 16.
       </span>
     </footer>
   );
