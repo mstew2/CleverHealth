@@ -37,12 +37,12 @@ const Navbar = () => {
           {currentUser ? (
             <span onClick={logout}>Logout</span> */}
           ) : (
-            <Link className="link" to="/login">
+            <Link className="sw" to="/savedworkouts">
               Login
             </Link>
           )}
-          <span className="write">
-            <Link className="link" to="/write">
+          <span className="wg">
+            <Link className="link" to="/workoutgenerator">
               Write
             </Link>
           </span>

@@ -4,8 +4,9 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
-import Register from "./pages/Workout_Generator";
+import WG from "./pages/Workout_Generator";
 import Home from "./pages/Home";
+import SW from "./pages/Saved_Workouts";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { GoogleLogin } from 'react-google-login';
@@ -57,8 +58,11 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/register",
-    element: <Register />,
+    path: "/workoutgenerator",
+    element: <WG />,
+  },  {
+    path: "/savedworkouts",
+    element: <SW />,
   },
 ]);
 
