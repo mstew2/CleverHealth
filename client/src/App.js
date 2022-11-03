@@ -7,6 +7,8 @@ import {
 import WG from "./pages/Workout_Generator";
 import Home from "./pages/Home";
 import SW from "./pages/Saved_Workouts";
+import HealthPlan from "./pages/Saved_Workouts";
+import About from "./pages/Saved_Workouts";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { GoogleLogin } from 'react-google-login';
@@ -60,9 +62,18 @@ const router = createBrowserRouter([
   {
     path: "/workoutgenerator",
     element: <WG />,
-  },  {
+  },  
+  {
     path: "/savedworkouts",
     element: <SW />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/healthplan",
+    element: <HealthPlan />,
   },
 ]);
 

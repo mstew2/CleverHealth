@@ -1,10 +1,10 @@
-$lightGreen: #b9e7e7;
+$lightBlue: #c7caf0;
 
 .app {
   display: flex;
   justify-content: center;
   .container {
-    width: 1024px;
+    width: 1280px;
 
     .link {
       text-decoration: none;
@@ -18,7 +18,7 @@ $lightGreen: #b9e7e7;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: $lightGreen;
+      background-color: $lightBlue;
 
       h1 {
         font-size: 20px;
@@ -89,7 +89,7 @@ $lightGreen: #b9e7e7;
           }
 
           .write {
-            background-color: $lightGreen;
+            background-color: $lightBlue;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -114,7 +114,7 @@ $lightGreen: #b9e7e7;
     footer {
       margin-top: 100px;
       padding: 20px;
-      background-color: $lightGreen;
+      background-color: $lightBlue;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -149,7 +149,7 @@ $lightGreen: #b9e7e7;
               content: "";
               width: 100%;
               height: 100%;
-              background-color: $lightGreen;
+              background-color: $lightBlue;
               position: absolute;
               top: 20px;
               left: -20px;
@@ -188,7 +188,7 @@ $lightGreen: #b9e7e7;
 
               &:hover {
                 border: 1px solid white;
-                background-color: $lightGreen;
+                background-color: $lightBlue;
                 color: black;
               }
             }
@@ -290,7 +290,7 @@ $lightGreen: #b9e7e7;
 
             &:hover {
               border: 1px solid white;
-              background-color: $lightGreen;
+              background-color: $lightBlue;
               color: black;
             }
           }
