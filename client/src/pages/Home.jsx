@@ -25,21 +25,22 @@ const Home = () => {
     };
     fetchData();
   }, [cat]);
- const getQuote = () => {
-    try{
-      fetch("https://type.fit/api/quotes")
-      .then(res => res.json())
-      .then(data => {
-        let randomNum = Math.floor(Math.random() * data.length);
-        setQuotes(data[randomNum]); 
-    })
-    //.catch
-    }
-    catch(err){
-      console.log(err);
-    }
-    
- }
+
+  const getQuote = () => {
+      try{
+        fetch("https://type.fit/api/quotes")
+        .then(res => res.json())
+        .then(data => {
+          let randomNum = Math.floor(Math.random() * data.length);
+          setQuotes(data[randomNum]); 
+      })
+      //.catch
+      }
+      catch(err){
+        console.log(err);
+      }
+      
+  }
 
  useEffect(() => {
   getQuote();
