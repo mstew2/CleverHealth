@@ -1,11 +1,15 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import axios from "axios";
+import { Link, renderMatches, useLocation } from "react-router-dom";
+//import {Quotes} from "../components/Quotes";
+//import App from "../App.css"
+import axios from "axios"
+//import image from "https://pngtree.com/freebackground/fitness-exercise-run-banner-background_1120513.html"
 
 
 const Home = () => {
+  const [quotes, setQuotes] = useState([]);
   const [posts, setPosts] = useState([]);
 
   const cat = useLocation().search
@@ -21,6 +25,28 @@ const Home = () => {
     };
     fetchData();
   }, [cat]);
+ const getQuote = () => {
+    try{
+      fetch("https://type.fit/api/quotes")
+      .then(res => res.json())
+      .then(data => {
+        let randomNum = Math.floor(Math.random() * data.length);
+        setQuotes(data[randomNum]); 
+    })
+    //.catch
+    }
+    catch(err){
+      console.log(err);
+    }
+    
+ }
+
+ useEffect(() => {
+  getQuote();
+
+ },[])
+  
+
   // const posts = [
   //   {
   //     id: 1,
@@ -53,11 +79,27 @@ const Home = () => {
     return doc.body.textContent
   }
 
-
+  //const homePic = new URL ("../img/CleverHealthoption.jpg", import.meta.url)
+  
   return (
     <div className="home">
-      <div className="posts">
-        {posts.map((post) => (
+      <div className="content">
+        <div className="quote">
+        <p>"{quotes.text}"</p>
+        <p>-{quotes.author}</p>
+        <button onClick={getQuote}className="button">
+          <span>New quote</span>
+          </button> 
+        </div>
+        
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+//i dont think we need a login page because of the google auth
+/*{posts.map((post) => (
           <div className="post" key={post.id}>
             <div className="img">
               <img src={`../upload/${post.img}`} alt="" />
@@ -70,11 +112,4 @@ const Home = () => {
               <button>Read More</button>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default Home;
-//i dont think we need a login page because of the google auth
+        ))}*/
