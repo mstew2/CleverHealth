@@ -10,13 +10,26 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="container">
-        <div className="logo">
-          <Link to="/">
-          <img src={Logo} alt="" />
-          </Link>
+        <div className="leftSide">
+        <img src={Logo} alt="" />
         </div>
-        <div className="links">
+        <div className="rightSide">
+          <Link to="/">Home</Link>
+          <Link to="/workoutgenerator">Generator</Link>
+          <Link to="/savedworkouts">Saved</Link>
+          <Link to="/healthplan">Diet</Link>
+          <Link to="/about">About</Link>
+          <GoogleButton onClick={() => {
+            console.log('Google button clicked') }} />
+       
+        </div>
+      
+    </div>
+  );
+};
+
+/*
+ <div className="links">
           <Link className="link" to="/workoutgenerator">
             <h6>GENERATOR</h6>
           </Link>
@@ -29,18 +42,15 @@ const Navbar = () => {
           <Link className="link" to="/about">
             <h6>ABOUT</h6>
           </Link>
-          {/* <span>{currentUser?.username}</span>
+          { <span>{currentUser?.username}</span>
           {currentUser ? (
-            <span onClick={logout}>Logout</span> */}
+            <span onClick={logout}>Logout</span>}
       
             <Link className="sw" to="/savedworkouts">
             <GoogleButton onClick={() => { console.log('Google button clicked') }} />
             </Link>
           
         </div>
-      </div>
-    </div>
-  );
-};
+        */
 
 export default Navbar;
