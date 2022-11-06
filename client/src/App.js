@@ -17,7 +17,6 @@ import React, { useState, useEffect } from 'react';
 import "./style.scss"
 import axios from "axios";
 
-
 const Layout = () => {
   return (
     <>
@@ -62,20 +61,40 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/workoutgenerator",
-    element: <WG />,
+    element: <Navbar />,
+    children: [
+      {
+      path: "/workoutgenerator",
+      element: <WG />,
+      },
+    ],
   },  
   {
-    path: "/savedworkouts",
-    element: <SW />,
+    element: <Navbar />,
+    children: [
+      {
+      path: "/savedworkouts",
+      element: <SW />,
+      },
+    ],
   },
   {
-    path: "/about",
-    element: <About />,
+    element: <Navbar />,
+    children: [
+      {
+      path: "/about",
+      element: <About />,
+      },
+    ],
   },
   {
-    path: "/healthplan",
-    element: <HealthPlan />,
+    element: <Navbar />,
+    children: [
+      {
+      path: "/healthplan",
+      element: <HealthPlan />,
+      },
+    ],
   },
 ]);
 
