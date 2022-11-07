@@ -11,11 +11,9 @@ import HealthPlan from "./pages/Saved_Workouts";
 import About from "./pages/Saved_Workouts";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { GoogleLogin } from 'react-google-login';
-import { gapi } from 'gapi-script';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import jwt_decode from "jwt-decode";
 import "./style.scss"
-import axios from "axios";
 
 const Layout = () => {
   return (
@@ -27,26 +25,8 @@ const Layout = () => {
   );
 };
 
-
 //google auth
-const clientId = '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com';
 
-// useEffect(() => {
-//    const initClient = () => {
-//          gapi.client.init({
-//          clientId: clientId,
-//          scope: ''
-//        });
-//     };
-//     gapi.load('client:auth2', initClient);
-// });
-
-const onSuccess = (res) => {
-  console.log('success:', res);
-};
-const onFailure = (err) => {
-  console.log('failed:', err);
-};
 
 //below from video
 const router = createBrowserRouter([
@@ -99,77 +79,56 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  //google auth below
+  const [user, setUser] = useState({});
+
+  function handleCallbackResponse(response){
+    console.log("Encoded JWT ID token: " + response.credential);
+    var userObject = jwt_decode(response.credential);
+    console.log(userObject);
+    setUser(userObject);
+    document.getElementById("signInDiv").hidden = true;
+  }
+
+  function handleSignOut(event){
+    setUser({});
+    document.getElementById("signInDiv").hidden = false;
+  }
+  
+  useEffect(() => {
+    /* global google */
+     google.accounts.id.initialize({
+      client_id: '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com',
+      callback: handleCallbackResponse
+     });
+     google.accounts.id.renderButton(
+      document.getElementById("signInDiv"),
+      { theme: "outline", size: "large"}
+     );
+  
+     //google.accounts.id.prompt(); /* if you want to prompt a sign in on first visit to the page */
+  }, []);
+  //if we have no user: sign in button
+  //if we have a user: sign out button
+
   return (
     <div className="app">
+      <div id="signInDiv"></div>
+      { Object.keys(user).length != 0 &&
+        <button onClick= {(e) => handleSignOut(e)}>Sign Out</button>
+
+      }
+      { user && 
+        <div>
+          <img src= {user.picture}></img>
+          <h3>{user.name}</h3>
+        </div>
+      }
       <div className="container">
         <RouterProvider router={router} />
       </div>
     </div>
   );
-  // //below is google auth
-  // const [ profile, setProfile ] = useState([]);
-  //   const clientId = '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com';
-  //   useEffect(() => {
-  //       const initClient = () => {
-  //           gapi.client.init({
-  //               clientId: clientId,
-  //               scope: ''
-  //           });
-  //       };
-  //       gapi.load('client:auth2', initClient);
-  //   });
-
-  //   const onSuccess = (res) => {
-  //       setProfile(res.profileObj);
-  //   };
-
-  //   const onFailure = (err) => {
-  //       console.log('failed', err);
-  //   };
-
-  //   const logOut = () => {
-  //       setProfile(null);
-  //   };
-
-  //   return (
-  //       <div>
-  //         //idk if this is necessary
-  //         {/* <Login />
-  //         <Logout /> */}
-  //         //this above rite here
-  //           <h2>React Google Login</h2>
-  //           <br />
-  //           <br />
-  //           {profile ? (
-  //               <div>
-  //                   <img src={profile.imageUrl} alt="user image" />
-  //                   <h3>User Logged in</h3>
-  //                   <p>Name: {profile.name}</p>
-  //                   <p>Email Address: {profile.email}</p>
-  //                   <br />
-  //                   <br />
-  //                   {/* <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} /> */}
-  //               </div>
-  //           ) : (
-  //               <GoogleLogin
-  //                   clientId={clientId}
-  //                   buttonText="Sign in with Google"
-  //                   onSuccess={onSuccess}
-  //                   onFailure={onFailure}
-  //                   cookiePolicy={'single_host_origin'}
-  //                   isSignedIn={true}
-  //               />
-  //           )}
-  //       </div>
-//};
-    //below unused is from vid
-  // return (
-  //   <div className="app">
-  //     <div className="container">
-  //       <RouterProvider router={router} />
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default App;
