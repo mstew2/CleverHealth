@@ -1,8 +1,11 @@
-# summary
-cd into client, if you dont have npm installed then run 'npm install' ??as well as 'npm add react-router-dom' and 'npm add sass'
-inside of api, run 'npm init -y' and 'npm add express mysql nodemon'??
+## How to start the webapp
+# What to install:
+1. if you dont have npm installed then run ```npm install``` in CleverHealth/
+2. cd into client, and run ```npm add react-router-dom```, ```npm add sass```, ```npm install --save react-google-button```
+3. inside of api, run ```npm init -y``` and ```npm add express mysql nodemon```
 
-to run the app, cd into client and run 'npm start'
+# How to run:
+1. cd into client and run ```npm start```
 
 # Getting Started with Create React App
 
