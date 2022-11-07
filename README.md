@@ -1,13 +1,13 @@
-## How to start the webapp
-# What to install:
+# How to start the webapp
+## What to install:
 1. if you dont have npm installed then run ```npm install``` in CleverHealth/
 2. cd into client, and run ```npm add react-router-dom```, ```npm add sass```, ```npm install --save react-google-button```
 3. inside of api, run ```npm init -y``` and ```npm add express mysql nodemon```
 
-# How to run:
+## How to run:
 1. cd into client and run ```npm start```
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
