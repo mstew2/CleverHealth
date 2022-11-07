@@ -3,13 +3,45 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import Logo from "../img/logo.png";
 import GoogleButton from 'react-google-button'
+import { useEffect, useState } from 'react';
+import jwt_decode from "jwt-decode";
 
 
 const Navbar = () => {
-//   const { currentUser, logout } = useContext(AuthContext);
+
+  const [user, setUser] = useState({});
+
+  //   const { currentUser, logout } = useContext(AuthContext);
+  function handleCallbackResponse(response){
+    console.log("Encoded JWT ID token: " + response.credential);
+    var userObject = jwt_decode(response.credential);
+    console.log(userObject);
+    setUser(userObject);
+    document.getElementById("signInDiv").hidden = true;
+  }
+
+  function handleSignOut(event){
+    setUser({});
+    document.getElementById("signInDiv").hidden = false;
+  }
+
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com',
+      callback: handleCallbackResponse
+    });
+    google.accounts.id.renderButton(
+      document.getElementById("signInDiv"),
+      { theme: "outline", size: "large"}
+    );
+
+    //google.accounts.id.prompt(); /* if you want to prompt a sign in on first visit to the page */
+  }, []);
 
   return (
     <div className="navbar">
+      
         <div className="leftSide">
         <Link to="/">
         <img src={Logo} alt="" />
@@ -21,38 +53,20 @@ const Navbar = () => {
           <Link to="/savedworkouts">Saved</Link>
           <Link to="/healthplan">Diet</Link>
           <Link to="/about">About</Link>
-          <GoogleButton onClick={() => {
-            console.log('Google button clicked') }} />
-       
-        </div>
-      
+          <div id="signInDiv"></div>
+          {/* WHY ISNT THE SIGN OUT BUTTON SHOWING ????????????? */}
+          {/* gotta do a refreshToken system to save the account on the page ! Do this once the db is set up*/}
+            { Object.keys(user).length != 0 &&
+              <button onClick= {(e) => handleSignOut(e)}>Sign Out</button>
+            }
+            { user && 
+              <div>
+                <h4>{user.name}</h4>
+              </div>
+            }
+          </div>   
     </div>
   );
 };
-
-/*
- <div className="links">
-          <Link className="link" to="/workoutgenerator">
-            <h6>GENERATOR</h6>
-          </Link>
-          <Link className="link" to="/savedworkouts">
-            <h6>SAVED</h6>
-          </Link>
-          <Link className="link" to="/healthplan">
-            <h6>DIET</h6>
-          </Link>
-          <Link className="link" to="/about">
-            <h6>ABOUT</h6>
-          </Link>
-          { <span>{currentUser?.username}</span>
-          {currentUser ? (
-            <span onClick={logout}>Logout</span>}
-      
-            <Link className="sw" to="/savedworkouts">
-            <GoogleButton onClick={() => { console.log('Google button clicked') }} />
-            </Link>
-          
-        </div>
-        */
 
 export default Navbar;
