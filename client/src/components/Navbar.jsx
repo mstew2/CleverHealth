@@ -2,10 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import Logo from "../img/logo.png";
-import GoogleButton from 'react-google-button'
 import { useEffect, useState } from 'react';
 import jwt_decode from "jwt-decode";
-
 
 const Navbar = () => {
 
@@ -50,20 +48,23 @@ const Navbar = () => {
         <div className="rightSide">
           <Link to="/">Home</Link>
           <Link to="/workoutgenerator">Generator</Link>
-          <Link to="/savedworkouts">Saved</Link>
+          <Link to="/account">Account</Link>
           <Link to="/healthplan">Diet</Link>
           <Link to="/about">About</Link>
-          <div id="signInDiv"></div>
           {/* WHY ISNT THE SIGN OUT BUTTON SHOWING ????????????? */}
           {/* gotta do a refreshToken system to save the account on the page ! Do this once the db is set up*/}
-            { Object.keys(user).length != 0 &&
-              <button onClick= {(e) => handleSignOut(e)}>Sign Out</button>
-            }
+          </div>
+          <div className = "account">
+            <div id="signInDiv"></div>
             { user && 
-              <div>
-                <h4>{user.name}</h4>
-              </div>
-            }
+                <div>
+                  <h4>{user.name}</h4>
+                </div>
+              }
+            { Object.keys(user).length != 0 &&
+                <button onClick= {(e) => handleSignOut(e)}>Sign Out</button>
+              }
+              
           </div>   
     </div>
   );

@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 import WG from "./pages/Workout_Generator";
 import Home from "./pages/Home";
-import SW from "./pages/Saved_Workouts";
-import HealthPlan from "./pages/Saved_Workouts";
-import About from "./pages/Saved_Workouts";
+import Account from "./pages/Account";
+import HealthPlan from "./pages/Account";
+import About from "./pages/Account";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./style.scss"
@@ -51,8 +51,8 @@ const router = createBrowserRouter([
     element: <Navbar />,
     children: [
       {
-      path: "/savedworkouts",
-      element: <SW />,
+      path: "/account",
+      element: <Account />,
       },
     ],
   },
@@ -60,8 +60,8 @@ const router = createBrowserRouter([
     element: <Navbar />,
     children: [
       {
-      path: "/about",
-      element: <About />,
+      path: "/account",
+      element: <Account />,
       },
     ],
   },

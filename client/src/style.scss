@@ -97,6 +97,8 @@ $lightOrange: #e8b962;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      left: 250px;
     }
     
     a {
@@ -105,11 +107,17 @@ $lightOrange: #e8b962;
       margin: 20px;
     }
     
-    .rightSide button {
-      margin-right: 10px;
-      background-color: transparent;
-      border: none;
-      color: white;
+    .account {
+      flex: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 260px;
+    }
+
+    .account button{
+      margin-left: 40px;
       cursor: pointer;
     }
     
