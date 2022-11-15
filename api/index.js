@@ -21,6 +21,12 @@ connection.once('open', () => {
   console.log("Successfully estblished MongoDB connection")
 });
 
+//const workoutRouter = require('./routes/workout');
+const userRouter = require('./routes/user')
+
+//app.use('/workout', workoutRouter);
+app.use('/users', userRouter);
+
 app.listen(port, () => {
   console.log(`Server is listening on port: ${port}`);
 });

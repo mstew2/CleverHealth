@@ -1,0 +1,21 @@
+[{
+    "test1Name": {
+        "name": "testName",
+        "sets": 3,
+        "reps": 10
+    }
+},
+{
+    "test2Name": {
+        "name": "testName",
+        "sets": 3,
+        "reps": 10
+    }
+},
+{
+    "test3Name": {
+        "name": "testName",
+        "sets": 3,
+        "reps": 10
+    }
+}]
