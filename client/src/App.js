@@ -7,9 +7,9 @@ import {
 import WG from "./pages/Workout_Generator";
 import Home from "./pages/Home";
 import SW from "./pages/Saved_Workouts";
-import HealthPlan from "./pages/Saved_Workouts";
+import HealthPlan from "./pages/HealthPlan";
 import About from "./pages/Saved_Workouts";
-import Navbar from "./components/Navbar";
+import HealthNav from "./components/HealthNav";
 import Footer from "./components/Footer";
 import { GoogleLogin } from 'react-google-login';
 import { gapi } from 'gapi-script';
@@ -20,7 +20,7 @@ import axios from "axios";
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      <HealthNav sticky="top"/>
       <Outlet />
       <Footer />
     </>
@@ -58,10 +58,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      {
+        path: "/healthplan",
+        element: <HealthPlan />,
+      },
     ],
   },
   {
-    element: <Navbar />,
+    element: <HealthNav />,
     children: [
       {
       path: "/workoutgenerator",
@@ -70,7 +74,7 @@ const router = createBrowserRouter([
     ],
   },  
   {
-    element: <Navbar />,
+    element: <HealthNav />,
     children: [
       {
       path: "/savedworkouts",
@@ -79,7 +83,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    element: <Navbar />,
+    element: <HealthNav />,
     children: [
       {
       path: "/about",
@@ -88,7 +92,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    element: <Navbar />,
+    element: <HealthNav />,
     children: [
       {
       path: "/healthplan",
