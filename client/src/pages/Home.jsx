@@ -26,6 +26,20 @@ const Home = () => {
     fetchData();
   }, [cat]);
 
+//   var category = 'fitness'
+// // $.ajax
+// // ({
+// //     method: 'GET',
+// //     url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+// //     headers: { 'X-Api-Key': 'YOUR_API_KEY'},
+// //     contentType: 'application/json',
+// //     success: function(result) {
+// //         console.log(result);
+// //     },
+// //     error: function ajaxError(jqXHR) {
+// //         console.error('Error: ', jqXHR.responseText);
+// //     }
+// // });
   const getQuote = () => {
       try{
         fetch("https://type.fit/api/quotes")
@@ -89,7 +103,7 @@ const Home = () => {
         <p>"{quotes.text}"</p>
         <p>-{quotes.author}</p>
         <button onClick={getQuote}className="button">
-          <span>New quote</span>
+          <span>New Quote</span>
           </button> 
         </div>
         
