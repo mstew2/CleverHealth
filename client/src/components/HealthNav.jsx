@@ -9,7 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function HealthNav() {
   return (
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" sticky="top">
         <Container classname="nav">
           <Navbar.Brand href="/"><img src={Logo} alt="Clever Health logo" className="logo"/></Navbar.Brand>
           <Nav className="me-auto">

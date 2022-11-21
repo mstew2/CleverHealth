@@ -1,5 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Syne+Mono&display=swap');
+
+
 
 $lightBlue: #c7caf0;
 $lightOrange: #e8b962;
@@ -95,7 +99,7 @@ $lightOrange: #e8b962;
 
     .home {
       height: 90vh;
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/homepage2.jpeg');
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/background2.jpg');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -116,9 +120,9 @@ $lightOrange: #e8b962;
           max-width: 900px;
           min-height: 180px;
           padding: 2%;
-          background: rgba(245, 245, 245, 0.661);
+          background: rgba(245, 245, 245, 0.806);
           
-          border-radius: 4px;
+          border-radius: 40px;
           box-shadow: 4px 4px 1px rgba(0,0,0,0.5);
           display: flex;
           flex-direction: column;
@@ -132,7 +136,7 @@ $lightOrange: #e8b962;
             font-style: oblique;
             font: bolder;
             //font-style: italic;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Shadows Into Light', cursive;
             word-wrap: break-word;
            }
 
@@ -155,8 +159,8 @@ $lightOrange: #e8b962;
             height: 50px;
             width: 100px;
             opacity: 1;
-            background-color: rgba(0, 0, 0, 0.777);
-            border: 1px solid rgba(22, 76, 167, 0.6);
+            background-color: rgba(213, 69, 21, 0.777);
+            border: 1px solid rgba(0, 0, 0, 0.6);
           }
             
           .button span {
@@ -205,23 +209,25 @@ $lightOrange: #e8b962;
   div.card {
     margin-right: 5vw;
     opacity: 50%;
+    background-color: rgb(252, 163, 178);
+    color: white;
   }
 
   div.card:hover{
     opacity: 100%;
+    background-color: pink;
   }
 
   
 }
 
-.stress{
-  //position: relative;
+.stress {
   height: 90vh;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/Stress_Management.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
-  //justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 
@@ -229,24 +235,63 @@ $lightOrange: #e8b962;
     font-family: 'Shadows Into Light', cursive;
     font-size: 150px;
     color: white;
-    margin-left: 2vw;
+    margin-left: 5vw;
   }
 
   div.card {
-    margin-right: 10vw;
+    background-color: rgb(181, 134, 181);
+    color: white;
+    margin-right: 5vw;
     opacity: 50%;
   }
 
   div.card:hover{
     opacity: 100%;
+    background-color: rgb(202, 165, 202);
   }
 
+  
+}
+
+
+
+.sleep {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/sleep.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  h1{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 150px;
+    color: white;
+    margin-left: 5vw;
+  }
+
+  div.card {
+    margin-right: 5vw;
+    opacity: 50%;
+    background-color: rgb(82, 82, 131);
+    color: white;
+  }
+
+  div.card:hover{
+    opacity: 100%;
+    background-color: rgb(116, 116, 170);
+  }
+
+  
 }
 
 
 
 //Navbar
 nav {
+  position: relative;
   padding: 0;
 }
 
@@ -255,13 +300,21 @@ a.nav-link {
 }
 
   .google-button {
-    position: relative;
-    left: 55vw;
+    left: 82vw;
+    position: absolute;
+   
   }
 
 .shift-down {
   margin-top: 1.4vh;
   margin-left: 1.2vw;
+}
+
+hr {
+  color: white;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px;
 }
 
 };
