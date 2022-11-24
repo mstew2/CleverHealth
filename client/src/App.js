@@ -60,8 +60,8 @@ const router = createBrowserRouter([
     element: <Navbar />,
     children: [
       {
-      path: "/account",
-      element: <Account />,
+      path: "/about",
+      element: <About />,
       },
     ],
   },
