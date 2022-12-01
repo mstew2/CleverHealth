@@ -54,7 +54,10 @@ class WG extends React.Component {
             action="/savedWorkouts"
             onChange= {this.handleSelect}
           >
+          <div>
             <h1>Create New Workout</h1>
+            </div>
+            
             <Wrapped>
               <Dropdown
                 buttonName="Choose Difficulty"
@@ -78,9 +81,9 @@ class WG extends React.Component {
             <StyledButton type="submit" value="Generate Workout" />
             <p>You selected {this.state.time},{this.state.diff} </p>
           </FormWrapper>
-      </div>
-    );
-  }
-}
+     </div>
+    )
+  };
+};
 
 export default WG;

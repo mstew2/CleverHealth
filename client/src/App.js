@@ -70,15 +70,15 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    element: <HealthNav />,
-    children: [
-      {
-      path: "/workoutgenerator",
-      element: <WG />,
-      },
-    ],
-  },  
+  // {
+  //   element: <Layout />,
+  //   children: [
+  //     {
+  //     path: "/workoutgenerator",
+  //     element: <WG />,
+  //     },
+  //   ],
+  // },  
   {
     element: <HealthNav />,
     children: [
