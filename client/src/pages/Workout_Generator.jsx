@@ -6,10 +6,10 @@ import {
   StyledButton,
 } from "./WorkoutGeneratorComponents/stylesDropDown.js";
 
-console.log("hello")
+
 //main workout page class
+
 class WG extends React.Component {
-  
   constructor(props) {
     super(props);
     
@@ -44,6 +44,7 @@ class WG extends React.Component {
   }
 
   render() {
+
     return (
 
       //found in sytle.scss
