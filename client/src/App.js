@@ -62,6 +62,11 @@ const router = createBrowserRouter([
         path: "/healthplan",
         element: <HealthPlan />,
       },
+
+      {
+        path: "/workoutgenerator",
+        element: <WG />,
+      },
     ],
   },
   {

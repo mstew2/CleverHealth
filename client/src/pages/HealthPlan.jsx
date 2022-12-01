@@ -127,7 +127,9 @@ function HealthCard3() {
 }
 
 function HealthPlan() {
+  console.log("Hello")
   return (
+    
     <div>
         <div className='nutrition'>
             <h1>Nutrition</h1>
