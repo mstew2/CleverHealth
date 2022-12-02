@@ -6,8 +6,40 @@ import GoogleButton from 'react-google-button'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { useEffect, useState } from 'react';
+import jwt_decode from "jwt-decode";
 
 function HealthNav() {
+  const [user, setUser] = useState({});
+
+  //   const { currentUser, logout } = useContext(AuthContext);
+  function handleCallbackResponse(response){
+    console.log("Encoded JWT ID token: " + response.credential);
+    var userObject = jwt_decode(response.credential);
+    console.log(userObject);
+    setUser(userObject);
+    document.getElementById("signInDiv").hidden = true;
+  }
+
+  function handleSignOut(event){
+    setUser({});
+    document.getElementById("signInDiv").hidden = false;
+  }
+
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com',
+      callback: handleCallbackResponse
+    });
+    google.accounts.id.renderButton(
+      document.getElementById("signInDiv"),
+      { theme: "outline", size: "large"}
+    );
+
+    //google.accounts.id.prompt(); /* if you want to prompt a sign in on first visit to the page */
+  }, []);
+
   return (
       <Navbar bg="light" expand="lg" sticky="top">
         <Container className="nav">
@@ -17,38 +49,21 @@ function HealthNav() {
             <Nav.Link href="/workoutgenerator" className="shift-down">Generator</Nav.Link>
             <Nav.Link href="/savedworkouts" className="shift-down">Saved</Nav.Link>
             <Nav.Link href="/healthplan" className="shift-down">Your Health</Nav.Link>
-            <Nav.Link><GoogleButton className="google-button" onClick={() => {
-           console.log('Google button clicked') }} /></Nav.Link>
           </Nav>
         </Container>
+        <div className = "account">
+            <div id="signInDiv"></div>
+            { user && 
+              <div>
+              <h4>{user.name}</h4>
+            </div>
+          }
+        { Object.keys(user).length != 0 &&
+            <button onClick= {(e) => handleSignOut(e)}>Sign Out</button>
+          }
+        </div> 
       </Navbar>
   );
 }
-
-
-//const Navbar = () => {
-//   const { currentUser, logout } = useContext(AuthContext);
-
-//   return (
-//     <div className="navbar">
-//         <div className="leftSide">
-//         <Link to="/">
-//         <img src={Logo} alt="" />
-//         </Link>
-//         </div>
-//         <div className="rightSide">
-//           <Link to="/">Home</Link>
-//           <Link to="/workoutgenerator">Generator</Link>
-//           <Link to="/savedworkouts">Saved</Link>
-//           <Link to="/healthplan">Health info</Link>
-//           <Link to="/about">About</Link>
-//           <GoogleButton onClick={() => {
-//             console.log('Google button clicked') }} />
-       
-//         </div>
-      
-//     </div>
-//   );
-// };
 
 export default HealthNav;
