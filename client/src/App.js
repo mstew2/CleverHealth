@@ -4,6 +4,7 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
+//import {DropDown} from "./pages/WorkoutGeneratorComponents"
 import WG from "./pages/Workout_Generator";
 import Home from "./pages/Home";
 import SW from "./pages/Saved_Workouts";
@@ -62,17 +63,22 @@ const router = createBrowserRouter([
         path: "/healthplan",
         element: <HealthPlan />,
       },
-    ],
-  },
-  {
-    element: <HealthNav />,
-    children: [
+
       {
-      path: "/workoutgenerator",
-      element: <WG />,
+        path: "/workoutgenerator",
+        element: <WG />,
       },
     ],
-  },  
+  },
+  // {
+  //   element: <Layout />,
+  //   children: [
+  //     {
+  //     path: "/workoutgenerator",
+  //     element: <WG />,
+  //     },
+  //   ],
+  // },  
   {
     element: <HealthNav />,
     children: [

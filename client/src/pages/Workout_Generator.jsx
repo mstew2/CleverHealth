@@ -1,79 +1,89 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import axios from "axios";
+import { Dropdown, Option } from "./WorkoutGeneratorComponents/DropDown.js";
+import {
+  FormWrapper,
+  Wrapped,
+  StyledButton,
+} from "./WorkoutGeneratorComponents/stylesDropDown.js";
 
-const Home = () => {
-  const [posts, setPosts] = useState([]);
 
-  const cat = useLocation().search
+//main workout page class
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(`/posts${cat}`);
-        setPosts(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, [cat]);
-  // const posts = [
-  //   {
-  //     id: 1,
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/6489663/pexels-photo-6489663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/4230630/pexels-photo-4230630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/6157049/pexels-photo-6157049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   },
-  // ];
+class WG extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = { diff: "Easy", time: "10"};
 
-  const getText = (html) =>{
-    const doc = new DOMParser().parseFromString(html, "text/html")
-    return doc.body.textContent
+    this.handleSelect = this.handleSelect.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
-  return (
-    <div className="home">
-      <div className="posts">
-        {posts.map((post) => (
-          <div className="post" key={post.id}>
-            <div className="img">
-              <img src={`../upload/${post.img}`} alt="" />
+  //called when dropdown changed
+  handleSelect(event) {
+    event.stopPropagation();
+    console.log(event.target.id);
+
+    //checks which dropdown is selected and changes correct variable
+    if(event.target.id == "1")
+    {
+      this.setState({ diff: event.target.value});
+    }
+    else if ((event.target.id == "2")){
+      this.setState({ time: event.target.value});
+    }
+  }
+
+  //called when submit button clicked
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log(this.state.value);
+
+    //make post requests
+  }
+
+  render() {
+
+    return (
+
+      //found in sytle.scss
+      <div className="img-background">
+          <FormWrapper
+            //action needs to be changed
+            action="/savedWorkouts"
+            onChange= {this.handleSelect}
+          >
+          <div>
+            <h1>Create New Workout</h1>
             </div>
-            <div className="content">
-              <Link className="link" to={`/post/${post.id}`}>
-                <h1>{post.title}</h1>
-              </Link>
-              <p>{getText(post.desc)}</p>
-              <button>Read More</button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+            
+            <Wrapped>
+              <Dropdown
+                buttonName="Choose Difficulty"
+                id = "1"
+              >
+                <Option value="Easy" />
+                <Option value="Medium" />
+                <Option value="Hard" />
+              </Dropdown>
+              <Dropdown
+                buttonName="Choose Time Limit"
+                id = "2"
+              >
+                <Option value="10" />
+                <Option value="15" />
+                <Option value="30" />
+                <Option value="45" />
+                <Option value="60" />
+              </Dropdown>
+            </Wrapped>
+            <StyledButton type="submit" value="Generate Workout" />
+            <p>You selected {this.state.time},{this.state.diff} </p>
+          </FormWrapper>
+     </div>
+    )
+  };
 };
 
-export default Home;
-//i dont think we need a login page because of the google auth
+export default WG;
