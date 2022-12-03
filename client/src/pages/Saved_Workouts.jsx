@@ -22,9 +22,11 @@ function SW(){
   })
 
   return (
-    <div className="table">
-    <Table striped bordered hover>
-      <thead>
+    <div>
+      <div className="saved">
+        <h1>Your Fitness Plan</h1>
+    <Table striped bordered hover size = "sm">
+    <thead>
         <tr>
           <th>Workout</th>
           <th>Sets</th>
@@ -34,20 +36,19 @@ function SW(){
       <tbody>
         {workouts.map(workout =>
          <tr>
-          <div className="align-me">
           <td>{workout.name}</td>
           <td>{workout.sets}</td>
           <td>{workout.reps}</td>
-          </div>
         </tr>
           )}    
-      </tbody>
-    </Table>
+      </tbody>  
+    </Table> 
+    </div>
     </div>
     
-  )
+    
+  );
 
 }
 
 export default SW;
- 

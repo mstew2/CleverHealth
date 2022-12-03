@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Syne+Mono&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 
 $lightBlue: #c7caf0;
 $lightOrange: #e8b962;
@@ -133,10 +133,10 @@ $lightOrange: #e8b962;
           p{
             color: rgb(4, 3, 4);
             font-size: 25px;
-            font-style: oblique;
-            font: bolder;
+            //font-style: oblique;
+            font: bold;
             //font-style: italic;
-            font-family: 'Shadows Into Light', cursive;
+            font-family: 'Cormorant Garamond', serif;
             word-wrap: break-word;
            }
 
@@ -187,6 +187,8 @@ $lightOrange: #e8b962;
     
 
       }
+
+//Workout Generator page
 .img-background{
   height: 90vh;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/background.jpeg');
@@ -196,6 +198,11 @@ $lightOrange: #e8b962;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+
+  h1{
+    font-family: 'Cormorant Garamond', serif;
+
+  }
 }
 
 //YourHealth
@@ -328,3 +335,47 @@ hr {
 }
 
 };
+
+.saved{
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+
+  Table{
+    background-color: rgba(255, 255, 255, 0.849);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: grey;
+
+    th{
+      font-size: 20px;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      color: rgb(77, 75, 75);
+
+    }
+    td{
+      font-size: 20px;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      color: rgb(77, 75, 75);
+
+    }
+
+  }
+
+  h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 100px;
+    margin-top: 10%;
+    margin-left: 5%;
+    color: white;
+    text-align: center;
+
+  }
+
+}
