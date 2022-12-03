@@ -48,6 +48,10 @@ const router = createBrowserRouter([
         path: "/workoutgenerator",
         element: <WG />,
       },
+      {
+        path: "/savedworkouts",
+        element: <SW />,
+        },
     ],
   },
   // {
@@ -59,33 +63,15 @@ const router = createBrowserRouter([
   //     },
   //   ],
   // },  
-  {
-    element: <HealthNav />,
-    children: [
-      {
-      path: "/savedworkouts",
-      element: <SW />,
-      },
-    ],
-  },
-  {
-    element: <HealthNav />,
-    children: [
-      {
-      path: "/about",
-      element: <About />,
-      },
-    ],
-  },
-  {
-    element: <HealthNav />,
-    children: [
-      {
-      path: "/healthplan",
-      element: <HealthPlan />,
-      },
-    ],
-  },
+  // {
+  //   element: <HealthNav />,
+  //   children: [
+  //     {
+  //     path: "/savedworkouts",
+  //     element: <SW />,
+  //     },
+  //   ],
+  // },
 ]);
 
 function App() {
