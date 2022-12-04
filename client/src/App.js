@@ -64,38 +64,15 @@ const router = createBrowserRouter([
         },
     ],
   },
-  // {
-  //   element: <Layout />,
-  //   children: [
-  //     {
-  //     path: "/workoutgenerator",
-  //     element: <WG />,
-  //     },
-  //   ],
-  // },  
-  // {
-  //   element: <HealthNav />,
-  //   children: [
-  //     {
-  //     path: "/savedworkouts",
-  //     element: <SW />,
-  //     },
-  //   ],
-  // },
 ]);
 
 function App() {
   return (
     <div className="app">
       <div className="container">
-        <RouterProvider router={router} />
-
-        {/* <BrowserRouter>
       <UserProvider>
-        <Route path="/dashboard" component={Dashboard} />
+        <RouterProvider router={router} />
       </UserProvider>
-      <Route path="/" exact component={Home} />
-    </BrowserRouter> */}
       </div>
     </div>
   );

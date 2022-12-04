@@ -41,6 +41,7 @@ class WG extends React.Component {
     console.log(this.state.value);
 
     //make post requests
+    
   }
 
   render() {
