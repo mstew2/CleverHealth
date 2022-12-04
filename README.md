@@ -1,11 +1,11 @@
 # How to start the webapp
 ## What to install:
-1. if you dont have npm installed then run ```npm install``` in CleverHealth/
-2. cd into client, and run ```npm add react-router-dom```, ```npm add sass```, ```npm install --save react-google-button```, ```npm install jwt-decode```
+1. if you dont have npm installed then run ```npm install``` and if you dont have yarn install run `npm install --global yarn` and `yarn install` in CleverHealth/
+2. cd into client, and run ```npm add react-router-dom```, ```npm add sass```, `yarn install`
 3. inside of api, run ```npm init -y``` and ```npm add express mysql nodemon```
 
 ## How to run:
-1. cd into client and run ```npm start```
+1. Make sure you are in CleverHealth/ root directory and run ```yarn dev```
 
 ## Getting Started with Create React App
 
