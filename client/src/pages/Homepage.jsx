@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link, renderMatches, useLocation } from "react-router-dom";
+import CardList from '../components/CardList';
 //import {Quotes} from "../components/Quotes";
 //import App from "../App.css"
 import axios from "axios"
@@ -106,8 +107,8 @@ const Home = () => {
           <span>New Quote</span>
           </button> 
         </div>
-        
       </div>
+      
     </div>
   );
 };

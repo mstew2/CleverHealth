@@ -7,6 +7,7 @@ import {
 //import {DropDown} from "./pages/WorkoutGeneratorComponents"
 import WG from "./pages/Workout_Generator";
 import Home from "./pages/Home";
+import Homepage from "./pages/Homepage";
 import SW from "./pages/Saved_Workouts";
 import HealthPlan from "./pages/HealthPlan";
 import About from "./pages/Saved_Workouts";
@@ -14,7 +15,9 @@ import HealthNav from "./components/HealthNav";
 import Footer from "./components/Footer";
 import "./style.scss"
 import React, { useEffect, useState } from 'react';
-import jwt_decode from "jwt-decode";
+import { BrowserRouter} from 'react-router-dom';
+import UserProvider from './contexts/UserProvider';
+import Dashboard from './pages/Dashboard';
 
 const Layout = () => {
   return (
@@ -27,7 +30,7 @@ const Layout = () => {
 };
 
 //google auth
-const clientId = '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com';
+//const clientId = '1055346852385-4tkhstuldbesmi1sk47el4fhlvdfaapq.apps.googleusercontent.com';
 
 //below from video
 const router = createBrowserRouter([
@@ -40,10 +43,17 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/homepage",
+        element: <Homepage />,
+      },
+      {
         path: "/healthplan",
         element: <HealthPlan />,
       },
-
       {
         path: "/workoutgenerator",
         element: <WG />,
@@ -79,10 +89,16 @@ function App() {
     <div className="app">
       <div className="container">
         <RouterProvider router={router} />
+
+        {/* <BrowserRouter>
+      <UserProvider>
+        <Route path="/dashboard" component={Dashboard} />
+      </UserProvider>
+      <Route path="/" exact component={Home} />
+    </BrowserRouter> */}
       </div>
     </div>
   );
 }
 
 export default App;
-//https://blog.logrocket.com/guide-adding-google-login-react-app/ for google auth other website
