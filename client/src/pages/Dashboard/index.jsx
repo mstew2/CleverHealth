@@ -5,7 +5,7 @@ import AuthenticatedUser from '../../components/AuthenticatedUser';
 import UnauthenticatedUser from '../../components/UnauthenticatedUser';
 
 const StyledDashboard = styled.div`
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 

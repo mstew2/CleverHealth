@@ -27,7 +27,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // CORS Middleware
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: 'http://localhost:3000/' }));
 
 // Logging Middleware
 app.use(morgan('dev'));
