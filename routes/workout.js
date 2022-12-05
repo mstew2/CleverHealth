@@ -23,7 +23,12 @@ router.post('/:id', async (req, res) => {
 
 
 //Fetch Workouts
-//router.get();
+router.get('/get/:id', async (req, res) => {
+    console.log(req.body);
+    const user = await User.findOne({providerId: req.params.id}).exec();
+    console.log(user.workouts);
+    res.send(user.workouts);
+});
 
 
 module.exports = router;
