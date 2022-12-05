@@ -1,169 +1,152 @@
 [{
-    "Full push-ups": {
+        "name": "Full push-ups",
         "sets": 3,
         "reps": 10,
         "bodyPart": "arms"
-    }
+    
 },
 {
-    "Bicep curls": {
+        "name": "Bicep curls",
         "sets": 3,
         "reps": 12,
         "bodyPart":"arms"
-    }
+    
 },
 {
-    "Tricep extensions": {
+        "name": "Tricep extensions",
         "sets": 3,
         "reps": 10,
         "bodyPart":"arms"
-    }
+    
 
 },
 {
-    "Hammer curls": {
+        "name": "Hammer curls",
         "sets": 3,
         "reps": 10,
         "bodyPart":"arms"
-    }
+
 
 },
 {
-    "Incline bicep curls": {
+        "name": "Incline bicep curls",
         "sets": 3,
         "reps": 10,
         "bodyPart":"arms"
-    }
 
 },
 {
-    "Single-arm overhead tricep extension": {
+        "name": "Single-arm overhead tricep extension",
         "sets": 3,
         "reps": 12,
         "bodyPart":"arms"
-    }
 
 },
 {
-    "Bench dips with legs extended": {
+        "name": "Bench dips with legs extended",
         "sets": 3,
         "reps": 10,
         "bodyPart":"arms"
-    }
 
 },
 {
-    "Dead hangs": {
+        "name": "Dead hangs",
         "sets": 3,
         "reps": "1 min",
         "bodyPart":"arms"
-    }
 
 },
 
 {
-    "Weighted goblet squat": {
+        "name": "Weighted goblet squat",
         "sets": 1,
         "reps": 20,
         "bodyPart":"legs"
-    }
 
 },
 
 {
-    "Weighted squat": {
+        "name": "Weighted squat",
         "sets": 1,
         "reps": 20,
         "bodyPart":"legs"
-    }
 
 },
 {
-    "Weighted lunges": {
+        "name": "Weighted lunges",
         "sets": 3,
         "reps": 8,
         "bodyPart":"legs"
-    }
 
 },
 {
-    "Bulgarian-split squat": {
+        "name": "Bulgarian-split squat",
         "sets": 3,
         "reps": 10,
         "bodyPart":"legs"
-    }
 
 },
 {
-    "Ball leg curl": {
+        "name": "Ball leg curl",
         "sets": 3,
         "reps": 10,
         "bodyPart":"legs"
-    }
 
 },
 {
-    "Weighted sumo squat": {
+        "name": "Weighted sumo squat",
         "sets": 1,
         "reps": 20,
         "bodyPart":"legs"
-    }
 
 },
 {
-    "Low squat jumps": {
+        "name": "Low squat jumps",
         "sets": 3,
         "reps": 8,
         "bodyPart":"legs"
-    }
 
 },
 {
-    "Bicycle crunch": {
+        "name": "Bicycle crunch",
         "sets": 3,
         "reps": 8,
         "bodyPart":"core"
-    }
 
 },
 {
-    "Crunches": {
+        "name": "Crunches",
         "sets": 3,
         "reps": 15,
         "bodyPart":"core"
-    }
 
 },
 {
-    "Bird Dog with elbow to knee": {
+        "name": "Bird Dog with elbow to knee",
         "sets": 1,
         "reps": 12,
         "bodyPart":"core"
-    }
 
 },
 {
-    "Forearm plank": {
+        "name":  "Forearm plank",
         "sets": 2,
         "reps": "1 min",
         "bodyPart":"core"
-    }
 
 },
 {
-    "Side plank hold": {
+        "name": "Side plank hold",
         "sets": 3,
         "reps": "0.5 min",
         "bodyPart":"core"
-    }
 
 },
 {
-    "Sit-up": {
+        "name": "Sit-up",
         "sets": 3,
         "reps": 8,
         "bodyPart":"core"
-    }
 
 }
 ]
