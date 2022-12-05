@@ -27,7 +27,9 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // CORS Middleware
-app.use(cors({ credentials: true, origin: 'http://localhost:3000/' }));
+app.use(cors({ credentials: true}));
+
+app.use(express.json());
 
 // Logging Middleware
 app.use(morgan('dev'));
@@ -49,6 +51,7 @@ app.use(passport.session());
 // Routes
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
+app.use('/workout', require('./routes/workout'));
 
 // Production Mode
 if (process.env.NODE_ENV === 'production') {

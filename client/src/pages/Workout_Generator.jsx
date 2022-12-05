@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import { Dropdown, Option } from "./WorkoutGeneratorComponents/DropDown.js";
 import {
   FormWrapper,
@@ -39,9 +40,14 @@ class WG extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log(this.state.value);
+    const body = {
+      difficulty: this.state.diff.toLowerCase(),
+      num: this.state.time
+    }
 
     //make post requests
-    
+    axios.post('http://localhost:5001/workout/118096720864814597695', body)
+      .then(res => console.log(res.data));
   }
 
   render() {
@@ -52,7 +58,7 @@ class WG extends React.Component {
       <div className="img-background">
           <FormWrapper
             //action needs to be changed
-            action="/savedWorkouts"
+            action={console.log(this.state.diff, this.state.time)}
             onChange= {this.handleSelect}
           >
           <div>
@@ -79,7 +85,7 @@ class WG extends React.Component {
                 <Option value="60" />
               </Dropdown>
             </Wrapped>
-            <StyledButton type="submit" value="Generate Workout" />
+            <StyledButton type="submit" value="Generate Workout" onClick={this.handleSubmit} />
             <p>You selected {this.state.time},{this.state.diff} </p>
           </FormWrapper>
      </div>

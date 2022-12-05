@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema({
     default: Date.now,
   },
   workouts: {
-    type: [{}],
+    type: [[{}]],
     required: false
 }
 },  {
