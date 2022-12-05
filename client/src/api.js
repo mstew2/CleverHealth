@@ -8,7 +8,7 @@ const baseURL =
 const headers =
   process.env.NODE_ENV === 'production'
     ? {}
-    : { 'Access-Control-Allow-Origin': 'http://localhost:3000/' };
+    : { 'Access-Control-Allow-Origin': 'http://localhost:5001/' };
 
 // Set config defaults
 const instance = axios.create({

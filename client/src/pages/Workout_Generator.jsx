@@ -6,11 +6,12 @@ import {
   Wrapped,
   StyledButton,
 } from "./WorkoutGeneratorComponents/stylesDropDown.js";
-import AuthenticatedUser from '../components/AuthenticatedUser';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 const WG = () =>
 {
+  const navigate = useNavigate();
   const userData = useContext(UserProvider.Context);
   const [selectedExercises,setSelectedExercises] = useState("1");
   const [selectedDiff,setSelectedDiff] = useState("Easy");
@@ -40,16 +41,16 @@ const WG = () =>
       numExercises: selectedExercises
     };
     axios.post("http://localhost:5001/workout/" + userData.providerId, body);
+
+    //redirect to saved workouts page
+    navigate('/savedworkouts');
   }
 
   return (
 
     //found in sytle.scss
     <div className="img-background">
-        <FormWrapper
-          //action needs to be changed
-          action="/workoutgenerator"
-        >
+        <FormWrapper>
         <div>
           <h1>Create New Workout</h1>
           </div>
@@ -80,7 +81,6 @@ const WG = () =>
             </Dropdown>
           </Wrapped>
           <StyledButton type="submit" value="Generate Workout" onClick={handleSubmit}/>
-          <p>You selected {selectedExercises},{selectedDiff} </p>
         </FormWrapper>
     </div>
   )
