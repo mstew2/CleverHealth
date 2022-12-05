@@ -57,11 +57,8 @@ const AuthenticatedUser = ({ user }) => {
 
  },[])
 
-//use styledTerminal for getting user ID
-
   return (
-    // <StyledAuthenticatedUser>
-    <div>
+      <div>   
       <p className="pageTitle"> Welcome {user.displayName}</p>
         <div className="content">
         <div className="home">
@@ -80,23 +77,23 @@ const AuthenticatedUser = ({ user }) => {
             {user.provider[0].toUpperCase() + user.provider.substring(1)}{' '}
             Account Information
           </pre>
-          {Object.keys(user).map((key) => {
+          {/* {Object.keys(user).map((key) => {
             return (
               <pre>
                 <b>{key}</b>: {user[key]}
               </pre>
             );
-          })}
+          })} */}
           <pre></pre>
         </div>
+
       <Card
         img={LogoutIcon}
         txt={'Logout'}
         color={'white'}
         fcn={() => logOut()}
       />
-    
-    </div>
+</div>
   );
 };
 

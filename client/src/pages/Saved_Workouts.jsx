@@ -1,7 +1,8 @@
 import React from "react";
-import {useeffect, useState} from "react";
+import {useContext, useState} from "react";
 import { useEffect } from "react";
 import Table from 'react-bootstrap/Table';
+import UserProvider from "../contexts/UserProvider";
 
 
 function SW(){
@@ -9,17 +10,18 @@ function SW(){
   const [workouts, setWorkouts] = useState([{
     name: '',
     sets: '',
-    reps: ''
+    reps: '' 
   }])
-
+  const userData = useContext(UserProvider.Context);
+  console.log(userData);
   //fetches data from fetch link that is TBD
-  useEffect(()=>{
-    fetch("/<TBD>").then(res=>{
-      if(res.ok){
-        return res.json()
-      }
-    }).then(jsonRes=>setWorkouts(jsonRes));
-  })
+  // useEffect(()=>{
+  //   fetch("/<TBD>").then(res=>{
+  //     if(res.ok){
+  //       return res.json()
+  //     }
+  //   }).then(jsonRes=>setWorkouts(jsonRes));
+  // })
 
   return (
     <div>
@@ -34,13 +36,13 @@ function SW(){
         </tr>
       </thead>
       <tbody>
-        {workouts.map(workout =>
+        {/* {workouts.map(workout =>
          <tr>
           <td>{workout.name}</td>
           <td>{workout.sets}</td>
           <td>{workout.reps}</td>
         </tr>
-          )}    
+          )}     */}
       </tbody>  
     </Table> 
     </div>

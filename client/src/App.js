@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/workoutgenerator",
-        element: <WG />,
+        element: <WG/>,
       },
       {
         path: "/savedworkouts",

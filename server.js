@@ -27,9 +27,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // CORS Middleware
-app.use(cors({ credentials: true}));
-
-app.use(express.json());
+app.use(cors({ credentials: true }));
 
 // Logging Middleware
 app.use(morgan('dev'));
@@ -43,6 +41,9 @@ app.use(
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
   }),
 );
+
+// Parser
+app.use(express.json());
 
 // Passport Middleware
 app.use(passport.initialize());

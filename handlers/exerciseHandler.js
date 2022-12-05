@@ -2,7 +2,6 @@
 
 const handler = (diff, num) => {
     const fs = require('fs');
-    console.log(process.cwd());
     let file = `./exercises/${diff}.json`;
     let data = fs.readFileSync(file);
     let exercises = JSON.parse(data);
