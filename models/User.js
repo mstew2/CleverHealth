@@ -25,6 +25,12 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  workouts: {
+    type: [{}],
+    required: false
+}
+},  {
+  timestamps: true    
 });
 
 module.exports = mongoose.model('User', UserSchema);
