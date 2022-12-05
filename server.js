@@ -27,7 +27,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // CORS Middleware
-app.use(cors({ credentials: true, origin: 'http://localhost:3000/' }));
+app.use(cors({ credentials: true }));
 
 // Logging Middleware
 app.use(morgan('dev'));
@@ -42,6 +42,9 @@ app.use(
   }),
 );
 
+// Parser
+app.use(express.json());
+
 // Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -49,6 +52,7 @@ app.use(passport.session());
 // Routes
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
+app.use('/workout', require('./routes/workout'));
 
 // Production Mode
 if (process.env.NODE_ENV === 'production') {

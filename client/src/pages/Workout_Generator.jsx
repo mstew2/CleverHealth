@@ -36,8 +36,8 @@ const WG = () =>
     //make post requests
     console.log(userData.providerId);
     const body = {
-      difficulty: selectedExercises.toLowerCase(),
-      numExercises: selectedDiff
+      difficulty: selectedDiff,
+      numExercises: selectedExercises
     };
     axios.post("http://localhost:5001/workout/" + userData.providerId, body);
   }
@@ -48,7 +48,7 @@ const WG = () =>
     <div className="img-background">
         <FormWrapper
           //action needs to be changed
-          action="/savedWorkouts"
+          action="/workoutgenerator"
         >
         <div>
           <h1>Create New Workout</h1>
@@ -79,7 +79,7 @@ const WG = () =>
               <Option value="6" />
             </Dropdown>
           </Wrapped>
-          <StyledButton type="submit" value="Generate Workout" />
+          <StyledButton type="submit" value="Generate Workout" onClick={handleSubmit}/>
           <p>You selected {selectedExercises},{selectedDiff} </p>
         </FormWrapper>
     </div>

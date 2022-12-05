@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
-const workoutSchema = new mongoose.Schema({
-  workouts: [{}]
-});
+//const workoutSchema = new mongoose.Schema({})
 
 const UserSchema = new mongoose.Schema({
   provider: {
@@ -30,7 +28,7 @@ const UserSchema = new mongoose.Schema({
     default: Date.now,
   },
   workouts: {
-    type: [workoutSchema],
+    type: [[{}]],
     required: false
 }
 },  {
