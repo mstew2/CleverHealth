@@ -57,11 +57,8 @@ const AuthenticatedUser = ({ user }) => {
 
  },[])
 
-//use styledTerminal for getting user ID
-
   return (
-    // <StyledAuthenticatedUser>
-    <div>
+      <div>   
       <p className="pageTitle"> Welcome {user.displayName}</p>
         <div className="content">
         <div className="home">
@@ -89,14 +86,14 @@ const AuthenticatedUser = ({ user }) => {
           })}
           <pre></pre>
         </div>
+
       <Card
         img={LogoutIcon}
         txt={'Logout'}
         color={'white'}
         fcn={() => logOut()}
       />
-    
-    </div>
+</div>
   );
 };
 
