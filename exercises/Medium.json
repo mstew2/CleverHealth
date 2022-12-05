@@ -1,0 +1,152 @@
+[{
+        "name": "Full push-ups",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart": "arms"
+    
+},
+{
+        "name": "Bicep curls",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"arms"
+    
+},
+{
+        "name": "Tricep extensions",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"arms"
+    
+
+},
+{
+        "name": "Hammer curls",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"arms"
+
+
+},
+{
+        "name": "Incline bicep curls",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"arms"
+
+},
+{
+        "name": "Single-arm overhead tricep extension",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"arms"
+
+},
+{
+        "name": "Bench dips with legs extended",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"arms"
+
+},
+{
+        "name": "Dead hangs",
+        "sets": 3,
+        "reps": "1 min",
+        "bodyPart":"arms"
+
+},
+
+{
+        "name": "Weighted goblet squat",
+        "sets": 1,
+        "reps": 20,
+        "bodyPart":"legs"
+
+},
+
+{
+        "name": "Weighted squat",
+        "sets": 1,
+        "reps": 20,
+        "bodyPart":"legs"
+
+},
+{
+        "name": "Weighted lunges",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"legs"
+
+},
+{
+        "name": "Bulgarian-split squat",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"legs"
+
+},
+{
+        "name": "Ball leg curl",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"legs"
+
+},
+{
+        "name": "Weighted sumo squat",
+        "sets": 1,
+        "reps": 20,
+        "bodyPart":"legs"
+
+},
+{
+        "name": "Low squat jumps",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"legs"
+
+},
+{
+        "name": "Bicycle crunch",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"core"
+
+},
+{
+        "name": "Crunches",
+        "sets": 3,
+        "reps": 15,
+        "bodyPart":"core"
+
+},
+{
+        "name": "Bird Dog with elbow to knee",
+        "sets": 1,
+        "reps": 12,
+        "bodyPart":"core"
+
+},
+{
+        "name":  "Forearm plank",
+        "sets": 2,
+        "reps": "1 min",
+        "bodyPart":"core"
+
+},
+{
+        "name": "Side plank hold",
+        "sets": 3,
+        "reps": "0.5 min",
+        "bodyPart":"core"
+
+},
+{
+        "name": "Sit-up",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"core"
+
+}
+]

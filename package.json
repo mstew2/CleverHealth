@@ -1,7 +1,48 @@
 {
+  "name": "mern-stack-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "client-install": "cd client && yarn install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"nodemon server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrick-du/MERN-Stack-Boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrick-du/MERN-Stack-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/patrick-du/MERN-Stack-Boilerplate#readme",
   "dependencies": {
-    "gapi-script": "^1.2.0",
-    "react-google-button": "^0.7.2",
-    "react-google-login": "^5.2.2"
+    "concurrently": "^5.3.0",
+    "connect-mongo": "^3.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "http-proxy-middleware": "^1.0.5",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-jsx-a11y": "6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4",
+    "prettier": "^2.0.5"
   }
 }

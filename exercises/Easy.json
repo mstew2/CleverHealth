@@ -1,0 +1,168 @@
+[{
+        "name": "Knee push-ups", 
+        "sets": 3,
+        "reps": 6,
+        "bodyPart": "arms"
+},
+{
+        "name": "Bicep-curls",
+        "sets": 3,
+        "reps": 6,
+        "bodyPart":"arms"
+    
+},
+{
+        "name": "Tricep extensions",
+        "sets": 3,
+        "reps": 6,
+        "bodyPart":"arms"
+    
+
+},
+{
+        "name": "Hammer curls",
+        "sets": 3,
+        "reps": 6,
+        "bodyPart":"arms"
+    
+
+},
+{
+        "name": "Bench dips with bent knees and planted feet",
+        "sets": 3,
+        "reps": 6,
+        "bodyPart":"arms"
+    
+
+},
+{
+        "name": "Inchworm",
+        "sets": 3,
+        "reps": 6,
+        "bodyPart":"arms"
+    
+
+},
+{
+        "name": "Tricep dumbbell kickback",
+        "sets": 3,
+        "reps": 6,
+        "bodyPart":"arms"
+    
+
+},
+{
+        "name": "Lateral raises",
+        "sets": 3,
+        "reps": 6,
+        "bodyPart":"arms"
+    
+
+},
+
+{
+        "name": "Unweighted squat",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"legs"
+    
+
+},
+
+{
+        "name": "Unweighted lunges",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"legs"
+    
+
+},
+{
+        "name": "Ball leg curl",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"legs"
+    
+
+},
+{
+        "name": "Unweighted side lunges",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"legs"
+    
+
+},
+{
+        "name": "Unweighted sumo squat",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"legs"
+    
+
+},
+{
+        "name": "Wall-sit",
+        "sets": 3,
+        "reps": "1 min",
+        "bodyPart":"legs"
+    
+
+},
+{
+        "name": "Crunches",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Forearm plank",
+        "sets": 1,
+        "reps": "30 secs",
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Unweighted russian twist",
+        "sets": 1,
+        "reps": 8,
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Butterfly sit-up",
+        "sets": 1,
+        "reps": 6,
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Bridges",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Supine toe tap",
+        "sets": 1,
+        "reps": 8,
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Bird Dog",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"core"
+    
+
+}
+]

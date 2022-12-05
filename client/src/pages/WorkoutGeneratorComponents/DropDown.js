@@ -7,12 +7,13 @@ import {
 } from "./stylesDropDown.js";
 
 export function Dropdown(props) {
+
   return (
     <DropdownStyle>
       <StyledLabel>
         {props.buttonName}
       </StyledLabel>
-      <StyledSelect id={props.id}>
+      <StyledSelect id={props.id} onChange={props.onChange}>
         {props.children}
       </StyledSelect>
     </DropdownStyle>

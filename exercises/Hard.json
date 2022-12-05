@@ -1,0 +1,158 @@
+[{
+        "name": "Alligator push-ups",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart": "arms"
+},
+{
+        "name": "Pull-ups",
+        "sets": 3,
+        "reps": 8,
+        "bodyPart":"arms"
+},
+{
+        "name": "Dumbell Rolling tricep extension",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"arms"
+
+},
+{
+        "name": "Alternating wide-grip/close-grip bicep curls",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"arms"
+
+},
+{
+        "name": "Bicep curls",
+        "sets": 3,
+        "reps": 18,
+        "bodyPart":"arms"
+
+},
+{
+        "name": "Bench dips with straight legs and heels up",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"arms"
+
+},
+{
+        "name": "Hammer curl",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"arms"
+
+},
+{
+        "name": "Incline bicep curl",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"arms"
+
+},
+
+{
+        "name": "Weighted goblet squat",
+        "sets": 1,
+        "reps": 40,
+        "bodyPart":"legs"
+
+},
+
+{
+        "name": "Weighted elevator squat",
+        "sets": 3,
+        "reps": 15,
+        "bodyPart":"legs"
+
+},
+{
+        "name": "Bulgarian split squat with dumbbells",
+        "sets": 3,
+        "reps": 15,
+        "bodyPart":"legs"
+    
+
+},
+{
+        "name": "Weighted lunges",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"legs"
+
+},
+{
+        "name": "Weighted reverse lunges",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"legs"
+    
+
+},
+{
+        "name": "Weighted sumo squat",
+        "sets": 1,
+        "reps": 40,
+        "bodyPart":"legs"
+    
+
+},
+{
+        "name": "Mountain climber",
+        "sets": 3,
+        "reps": 15,
+        "bodyPart":"core"
+
+
+},
+{
+        "name": "Weighted russian twist",
+        "sets": 3,
+        "reps": 10,
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Weighted deadbug",
+        "sets": 1,
+        "reps": "3 min",
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Crunches",
+        "sets": 3,
+        "reps": 20,
+        "bodyPart":"core"
+
+
+},
+{
+        "name": "Bicycle crunches",
+        "sets": 3,
+        "reps": 12,
+        "bodyPart":"core"
+
+
+},
+{
+        "name": "Wrestler plank",
+        "sets": 1,
+        "reps": "3 min",
+        "bodyPart":"core"
+    
+
+},
+{
+        "name": "Wrestler plank",
+        "sets": 3,
+        "reps": "4 min",
+        "bodyPart":"core"
+
+
+}
+]
