@@ -2,7 +2,19 @@
 
 const handler = (diff, num) => {
     const fs = require('fs');
-    let file = `./exercises/${diff}.json`;
+    let file = '';
+    if (diff == 'Easy') {
+        file = `./exercises/Easy.json`;
+    }
+    else if (diff == 'Medium') {
+        file = `./exercises/Medium.json`;
+    }
+    else if (diff == 'Easy') {
+        file = `./exercises/Hard.json`;
+    }
+    else {
+        return null;
+    }
     let data = fs.readFileSync(file);
     let exercises = JSON.parse(data);
     let shuffled = exercises.sort(() => 0.5 - Math.random());
