@@ -9,7 +9,7 @@ const handler = (diff, num) => {
     else if (diff == 'Medium') {
         file = `./exercises/Medium.json`;
     }
-    else if (diff == 'Easy') {
+    else if (diff == 'Hard') {
         file = `./exercises/Hard.json`;
     }
     else {
