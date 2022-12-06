@@ -82,6 +82,15 @@ const SW = () => {
       )
     }
   }
+  else{
+    return(
+      <div>
+        <div className="saved">
+          <h1>You must Login first!</h1>
+        </div>
+      </div>
+    )
+  }
   }
 
 
