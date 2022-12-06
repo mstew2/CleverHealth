@@ -10,16 +10,16 @@ const StyledUnauthenticatedUser = styled.div``;
 const UnauthenticatedUser = () => {
   return (
     <StyledUnauthenticatedUser>
-      <p className="pageTitle"> Error 403: Forbidden</p>
+      <p className="pageTitle"> Login to Continue</p>
       <StyledTerminal>
         <TerminalTitleBar />
         <div className="content">
           <pre>
-            You tried to access a page you did not have prior authorization for. Please try again.
+            You tried to access a page you did not have prior authorization for. Please go back to login.
           </pre>
         </div>
       </StyledTerminal>
-      <Card img={HomeIcon} txt={'Return Home'} color={'white'} href={'/'} />
+      <Card img={HomeIcon} txt={'Return To Login'} color={'white'} href={'/'} />
     </StyledUnauthenticatedUser>
   );
 };

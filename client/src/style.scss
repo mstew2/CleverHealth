@@ -338,7 +338,7 @@ hr {
 };
 
 .saved{
-  height: 90vh;
+  height: auto;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/background.jpeg') repeat-y;
   background-size: cover;
   background-repeat: repeat-x;
@@ -378,11 +378,11 @@ hr {
   h1{
     font-family: 'Cormorant Garamond', serif;
     font-size: 100px;
-    margin-top: 10%;
-    margin-left: 5%;
+    margin-top: auto;
+    margin-left: auto;
     color: white;
     text-align: center;
 
   }
-
+  
 }

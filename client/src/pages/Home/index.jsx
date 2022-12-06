@@ -7,7 +7,7 @@ const StyledHome = styled.div`
   width: 50%;
   margin: 0 auto;
   text-align: center;
-
+  
   .pageTitle {
     font-weight: 400;
     font-size: 35px;
@@ -16,8 +16,8 @@ const StyledHome = styled.div`
 
 const Home = () => {
   return (
-    <StyledHome>
-      <p className="pageTitle">Login</p>
+    <StyledHome classname = "img-background">
+      <p className="pageTitle">Welcome to CleverHealth! Please Login</p>
       <Terminal />
       <CardList />
     </StyledHome>
