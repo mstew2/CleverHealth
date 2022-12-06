@@ -31,21 +31,24 @@ const WG = () =>
   }
 
   //called when submit button clicked
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     //make post requests
     console.log(userData.providerId);
+    await postWait();
+    //redirect to saved workouts page
+    navigate('/savedworkouts');
+  }
+  async function postWait()
+  {
     const body = {
       difficulty: selectedDiff,
       numExercises: selectedExercises
     };
-    axios.post("http://localhost:5001/workout/" + userData.providerId, body);
+    return axios.post("http://localhost:5001/workout/" + userData.providerId, body);
 
-    //redirect to saved workouts page
-    navigate('/savedworkouts');
   }
-
   return (
 
     //found in sytle.scss
