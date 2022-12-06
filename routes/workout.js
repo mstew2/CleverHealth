@@ -15,9 +15,6 @@ router.post('/:id', async (req, res) => {
         {providerId: req.params.id},
         {$push: {"workouts":  workout}
     });
-    // const temp = await User.findById('638d5e512757864bb4edee95').exec();
-    // const temp2 = await User.findOne({providerId: "118096720864814597695"}).exec();
-    // console.log(temp2);
     res.send(workout);
 });
 

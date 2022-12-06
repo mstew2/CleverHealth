@@ -1,11 +1,7 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import Logo from "../img/logo.png";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { useEffect, useState } from 'react';
-import CardList from '../components/CardList';
 
 
 function HealthNav() {

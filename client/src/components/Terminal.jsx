@@ -1,6 +1,4 @@
-import React from 'react';
-import { StyledTerminal } from './style';
-import TerminalTitleBar from './TerminalTitleBar';
+
 
 const Terminal = () => {
   // return (

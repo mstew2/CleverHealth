@@ -1,19 +1,11 @@
-import React from "react";
-import {useContext, useState} from "react";
+import React, {useContext, useState} from "react";
 import Table from 'react-bootstrap/Table';
 import UserProvider from "../contexts/UserProvider";
 import Carousel from 'react-bootstrap/Carousel';
 
 const SW = () => {
   //data variable holds all the workouts generated 
-  //let data = []
   const userData = useContext(UserProvider.Context);
-  // if (userData) {
-  //   axios.get("http://localhost:5001/workout/get/" + userData.providerId).then(resp => {
-  //     console.log(resp);
-  //     data = resp.data
-  //   });
-  // }
   function refreshPage() {
     window.location.reload(false);
   }
