@@ -1,8 +1,7 @@
-import React from 'react';
 import Card from './Card';
 import LogoutIcon from '../assets/logout.svg';
 import logOut from '../utils/logOut';
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const AuthenticatedUser = ({ user }) => {
   const [quotes, setQuotes] = useState([]);
