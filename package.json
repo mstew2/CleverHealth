@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patrick-du/MERN-Stack-Boilerplate.git"
+    "url": "git+https://github.com/michelestew/CleverHealth.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/patrick-du/MERN-Stack-Boilerplate/issues"
+    "url": "https://github.com/michelestew/CleverHealth/issues"
   },
-  "homepage": "https://github.com/patrick-du/MERN-Stack-Boilerplate#readme",
+  "homepage": "https://github.com/michelestew/CleverHealth#readme",
   "dependencies": {
     "concurrently": "^5.3.0",
     "connect-mongo": "^3.2.0",
