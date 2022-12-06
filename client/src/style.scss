@@ -339,16 +339,22 @@ hr {
 
 .saved{
   height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/background.jpeg');
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./img/background.jpeg') repeat-y;
   background-size: cover;
+  background-repeat: repeat-x;
+  //margin-top: 0%;
   background-position: center;
-  display: flex;
+  //background-repeat: repeat;
+  //display: flex;
 
   Table{
+    position: relative;
+    width:50%;
+    table-layout: fixed;
     background-color: rgba(255, 255, 255, 0.849);
     margin-top: 10%;
     margin-bottom: 10%;
-    margin-left: 10%;
+    margin-left: 25%;
     margin-right: 10%;
     border: grey;
 
