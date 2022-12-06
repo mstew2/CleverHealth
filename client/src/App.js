@@ -1,7 +1,6 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
 } from "react-router-dom";
 //import {DropDown} from "./pages/WorkoutGeneratorComponents"
@@ -10,12 +9,10 @@ import Home from "./pages/Home";
 import Homepage from "./pages/Homepage";
 import SW from "./pages/Saved_Workouts";
 import HealthPlan from "./pages/HealthPlan";
-import About from "./pages/Saved_Workouts";
 import HealthNav from "./components/HealthNav";
 import Footer from "./components/Footer";
 import "./style.scss"
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter} from 'react-router-dom';
+import React from 'react';
 import UserProvider from './contexts/UserProvider';
 import Dashboard from './pages/Dashboard';
 
