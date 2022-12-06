@@ -15,38 +15,38 @@ export const StyledTerminal = styled.div`
     padding-bottom: 5px;
   }
 
-  .buttons {
-    float: left;
-    padding-left: 8px;
-    padding-top: 8px;
-    line-height: 0;
-  }
+  // .buttons {
+  //   float: left;
+  //   padding-left: 8px;
+  //   padding-top: 8px;
+  //   line-height: 0;
+  // }
 
-  .mac-btn {
-    font-size: 9px;
-    width: 11px;
-    height: 11px;
-    display: inline-block;
-    border-radius: 50%;
-  }
+  // .mac-btn {
+  //   font-size: 9px;
+  //   width: 11px;
+  //   height: 11px;
+  //   display: inline-block;
+  //   border-radius: 50%;
+  // }
 
-  .close {
-    background: #ff5c5c;
-    border: 1px solid #ff5c5c;
-    margin-left: 4px;
-  }
+  // .close {
+  //   background: #ff5c5c;
+  //   border: 1px solid #ff5c5c;
+  //   margin-left: 4px;
+  // }
 
-  .minimize {
-    background: #ffbd4c;
-    border: 1px solid #ffbd4c;
-    margin-left: 4px;
-  }
+  // .minimize {
+  //   background: #ffbd4c;
+  //   border: 1px solid #ffbd4c;
+  //   margin-left: 4px;
+  // }
 
-  .zoom {
-    background: #00ca56;
-    border: 1px solid #00ca56;
-    margin-left: 4px;
-  }
+  // .zoom {
+  //   background: #00ca56;
+  //   border: 1px solid #00ca56;
+  //   margin-left: 4px;
+  // }
 
   .content {
     background-color: #eeeeee;

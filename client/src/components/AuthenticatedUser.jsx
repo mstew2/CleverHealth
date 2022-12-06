@@ -72,11 +72,11 @@ const AuthenticatedUser = ({ user }) => {
             </div>
           </div>
         </div>
-          <pre className="terminalTitle">
+          {/* <pre className="terminalTitle">
             Personal{' '}
             {user.provider[0].toUpperCase() + user.provider.substring(1)}{' '}
             Account Information
-          </pre>
+          </pre> */}
           {/* {Object.keys(user).map((key) => {
             return (
               <pre>
